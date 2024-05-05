@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/K-Phoen/grabana/alert"
-	"github.com/K-Phoen/grabana/alertmanager"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/alert"
+	"github.com/anil-appface/grabana/alertmanager"
+	"github.com/anil-appface/sdk"
 )
 
 // ErrAlertNotFound is returned when the requested alert can not be found.

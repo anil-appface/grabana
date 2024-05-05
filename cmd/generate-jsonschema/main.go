@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/K-Phoen/grabana/decoder"
+	"github.com/anil-appface/grabana/decoder"
 	"github.com/invopop/jsonschema"
 )
 
@@ -36,7 +36,7 @@ func main() {
 			},
 		}
 
-		if err := reflector.AddGoComments("github.com/K-Phoen/grabana", "./decoder"); err != nil {
+		if err := reflector.AddGoComments("github.com/anil-appface/grabana", "./decoder"); err != nil {
 			panic(fmt.Errorf("could not add Go comments to reflector: %w", err))
 		}
 

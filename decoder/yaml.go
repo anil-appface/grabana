@@ -3,7 +3,7 @@ package decoder
 import (
 	"io"
 
-	"github.com/K-Phoen/grabana/dashboard"
+	"github.com/anil-appface/grabana/dashboard"
 	"gopkg.in/yaml.v3"
 )
 

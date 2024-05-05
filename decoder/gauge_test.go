@@ -3,7 +3,7 @@ package decoder
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/gauge"
+	"github.com/anil-appface/grabana/gauge"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,7 +3,7 @@ package graphite
 import (
 	"time"
 
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 // Option represents an option that can be used to configure a graphite query.

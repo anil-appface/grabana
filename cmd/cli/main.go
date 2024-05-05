@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/K-Phoen/grabana/cmd/cli/cmd"
+	"github.com/anil-appface/grabana/cmd/cli/cmd"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"

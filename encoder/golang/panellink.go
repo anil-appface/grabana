@@ -2,7 +2,7 @@ package golang
 
 import (
 	"github.com/K-Phoen/jennifer/jen"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 func (encoder *Encoder) encodePanelLinks(links []sdk.Link) []jen.Code {

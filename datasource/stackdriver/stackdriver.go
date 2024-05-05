@@ -3,8 +3,8 @@ package stackdriver
 import (
 	"encoding/json"
 
-	"github.com/K-Phoen/grabana/datasource"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/datasource"
+	"github.com/anil-appface/sdk"
 )
 
 var _ datasource.Datasource = Stackdriver{}

@@ -3,14 +3,14 @@ package timeseries
 import (
 	"fmt"
 
-	"github.com/K-Phoen/grabana/alert"
-	"github.com/K-Phoen/grabana/errors"
-	"github.com/K-Phoen/grabana/links"
-	"github.com/K-Phoen/grabana/scheme"
-	"github.com/K-Phoen/grabana/timeseries/axis"
-	"github.com/K-Phoen/grabana/timeseries/fields"
-	"github.com/K-Phoen/grabana/timeseries/threshold"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/alert"
+	"github.com/anil-appface/grabana/errors"
+	"github.com/anil-appface/grabana/links"
+	"github.com/anil-appface/grabana/scheme"
+	"github.com/anil-appface/grabana/timeseries/axis"
+	"github.com/anil-appface/grabana/timeseries/fields"
+	"github.com/anil-appface/grabana/timeseries/threshold"
+	"github.com/anil-appface/sdk"
 )
 
 // Option represents an option that can be used to configure a graph panel.

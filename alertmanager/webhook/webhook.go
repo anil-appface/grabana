@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/K-Phoen/grabana/alertmanager"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/alertmanager"
+	"github.com/anil-appface/sdk"
 )
 
 // Option represents an option that can be used to configure a "webhook"

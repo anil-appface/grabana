@@ -1,7 +1,7 @@
 package alert
 
 import (
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 // ErrorMode represents the behavior of an alert in case of execution error.

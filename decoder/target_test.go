@@ -3,10 +3,10 @@ package decoder
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/target/graphite"
-	"github.com/K-Phoen/grabana/target/influxdb"
-	"github.com/K-Phoen/grabana/target/prometheus"
-	"github.com/K-Phoen/grabana/target/stackdriver"
+	"github.com/anil-appface/grabana/target/graphite"
+	"github.com/anil-appface/grabana/target/influxdb"
+	"github.com/anil-appface/grabana/target/prometheus"
+	"github.com/anil-appface/grabana/target/stackdriver"
 	"github.com/stretchr/testify/require"
 )
 

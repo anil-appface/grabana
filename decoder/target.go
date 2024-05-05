@@ -3,11 +3,12 @@ package decoder
 import (
 	"fmt"
 
-	"github.com/K-Phoen/grabana/target/graphite"
-	"github.com/K-Phoen/grabana/target/influxdb"
-	"github.com/K-Phoen/grabana/target/loki"
-	"github.com/K-Phoen/grabana/target/prometheus"
-	"github.com/K-Phoen/grabana/target/stackdriver"
+	"github.com/anil-appface/grabana/target/azurelog"
+	"github.com/anil-appface/grabana/target/graphite"
+	"github.com/anil-appface/grabana/target/influxdb"
+	"github.com/anil-appface/grabana/target/loki"
+	"github.com/anil-appface/grabana/target/prometheus"
+	"github.com/anil-appface/grabana/target/stackdriver"
 )
 
 var ErrTargetNotConfigured = fmt.Errorf("target not configured")
@@ -22,6 +23,7 @@ type Target struct {
 	InfluxDB    *InfluxDBTarget    `yaml:"influxdb,omitempty"`
 	Stackdriver *StackdriverTarget `yaml:",omitempty"`
 	Loki        *LokiTarget        `yaml:",omitempty"`
+	AzureLog    *AzureLogTarget    `yaml:"azurelog,omitempty"`
 }
 
 type PrometheusTarget struct {
@@ -78,6 +80,28 @@ func (t LokiTarget) toOptions() []loki.Option {
 
 	if t.Hidden {
 		opts = append(opts, loki.Hide())
+	}
+
+	return opts
+}
+
+type AzureLogTarget struct {
+	Query      string
+	Resource   string `yaml:",omitempty"`
+	TimeColumn string `yaml:"timecolumn,omitempty"`
+	Legend     string `yaml:",omitempty"`
+	Ref        string `yaml:",omitempty"`
+	Hidden     bool   `yaml:",omitempty"`
+}
+
+func (t AzureLogTarget) toOptions() []azurelog.Option {
+	opts := []azurelog.Option{
+		azurelog.Legend(t.Legend),
+		azurelog.Ref(t.Ref),
+	}
+
+	if t.Hidden {
+		opts = append(opts, azurelog.Hide())
 	}
 
 	return opts

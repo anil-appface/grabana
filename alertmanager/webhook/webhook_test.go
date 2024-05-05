@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/K-Phoen/grabana/alertmanager"
+	"github.com/anil-appface/grabana/alertmanager"
 	"github.com/stretchr/testify/require"
 )
 

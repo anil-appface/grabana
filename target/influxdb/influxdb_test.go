@@ -3,7 +3,7 @@ package influxdb_test
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/target/influxdb"
+	"github.com/anil-appface/grabana/target/influxdb"
 	"github.com/stretchr/testify/require"
 )
 

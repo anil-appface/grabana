@@ -1,13 +1,45 @@
 package timeseries
 
 import (
-	"github.com/K-Phoen/grabana/target/graphite"
-	"github.com/K-Phoen/grabana/target/influxdb"
-	"github.com/K-Phoen/grabana/target/loki"
-	"github.com/K-Phoen/grabana/target/prometheus"
-	"github.com/K-Phoen/grabana/target/stackdriver"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/target/azurelog"
+	"github.com/anil-appface/grabana/target/graphite"
+	"github.com/anil-appface/grabana/target/influxdb"
+	"github.com/anil-appface/grabana/target/loki"
+	"github.com/anil-appface/grabana/target/prometheus"
+	"github.com/anil-appface/grabana/target/stackdriver"
+	"github.com/anil-appface/sdk"
 )
+
+// WithAzureLogTarget adds a azure log query to the graph.
+func WithAzureLogTarget(query, resource, timeColumn string, options ...azurelog.Option) Option {
+	target := azurelog.New(query, options...)
+
+	return func(graph *TimeSeries) error {
+		graph.Builder.AddTarget(&sdk.Target{
+			RefID:          target.Ref,
+			Hide:           target.Hidden,
+			Expr:           target.Expr,
+			IntervalFactor: target.IntervalFactor,
+			Interval:       target.Interval,
+			Step:           target.Step,
+			LegendFormat:   target.LegendFormat,
+			Instant:        target.Instant,
+			Format:         target.Format,
+			AzureLogAnalytics: sdk.AzureLogAnalytics{
+				TimeColumn:    timeColumn,
+				DashboardTime: true,
+				Query:         query,
+				ResultFormat:  "time_series",
+				Resources: []string{
+					resource,
+				},
+			},
+			QueryType: "Azure Log Analytics",
+		})
+
+		return nil
+	}
+}
 
 // WithPrometheusTarget adds a prometheus query to the graph.
 func WithPrometheusTarget(query string, options ...prometheus.Option) Option {

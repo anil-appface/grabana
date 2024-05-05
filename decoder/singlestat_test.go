@@ -3,7 +3,7 @@ package decoder
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/singlestat"
+	"github.com/anil-appface/grabana/singlestat"
 	"github.com/stretchr/testify/require"
 )
 

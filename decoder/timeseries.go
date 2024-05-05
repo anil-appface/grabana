@@ -3,10 +3,10 @@ package decoder
 import (
 	"fmt"
 
-	"github.com/K-Phoen/grabana/row"
-	"github.com/K-Phoen/grabana/timeseries"
-	"github.com/K-Phoen/grabana/timeseries/axis"
-	"github.com/K-Phoen/grabana/timeseries/fields"
+	"github.com/anil-appface/grabana/row"
+	"github.com/anil-appface/grabana/timeseries"
+	"github.com/anil-appface/grabana/timeseries/axis"
+	"github.com/anil-appface/grabana/timeseries/fields"
 )
 
 var ErrInvalidGradientMode = fmt.Errorf("invalid gradient mode")
@@ -182,6 +182,9 @@ func (timeseriesPanel DashboardTimeSeries) target(t Target) (timeseries.Option, 
 	}
 	if t.Loki != nil {
 		return timeseries.WithLokiTarget(t.Loki.Query, t.Loki.toOptions()...), nil
+	}
+	if t.AzureLog != nil {
+		return timeseries.WithAzureLogTarget(t.AzureLog.Query, t.AzureLog.Resource, t.AzureLog.TimeColumn, t.AzureLog.toOptions()...), nil
 	}
 	if t.Stackdriver != nil {
 		stackdriverTarget, err := t.Stackdriver.toTarget()

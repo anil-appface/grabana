@@ -50,6 +50,6 @@ creation of dashboards, this library is meant for you.
 		),
 	)
 
-For a more information visit https://github.com/K-Phoen/grabana
+For a more information visit https://github.com/anil-appface/grabana
 */
 package grabana

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/K-Phoen/grabana/errors"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/errors"
+	"github.com/anil-appface/sdk"
 	"github.com/stretchr/testify/require"
 )
 

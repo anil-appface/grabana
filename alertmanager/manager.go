@@ -3,7 +3,7 @@ package alertmanager
 import (
 	"encoding/json"
 
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 // Option represents an option that can be used to configure an

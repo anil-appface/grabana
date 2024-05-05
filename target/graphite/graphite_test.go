@@ -3,7 +3,7 @@ package graphite_test
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/target/graphite"
+	"github.com/anil-appface/grabana/target/graphite"
 	"github.com/stretchr/testify/require"
 )
 

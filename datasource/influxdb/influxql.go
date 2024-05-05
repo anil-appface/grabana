@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 type InfluxQL struct {

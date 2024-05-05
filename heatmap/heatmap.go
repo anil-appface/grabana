@@ -3,14 +3,14 @@ package heatmap
 import (
 	"fmt"
 
-	"github.com/K-Phoen/grabana/errors"
-	"github.com/K-Phoen/grabana/heatmap/axis"
-	"github.com/K-Phoen/grabana/links"
-	"github.com/K-Phoen/grabana/target/graphite"
-	"github.com/K-Phoen/grabana/target/influxdb"
-	"github.com/K-Phoen/grabana/target/prometheus"
-	"github.com/K-Phoen/grabana/target/stackdriver"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/errors"
+	"github.com/anil-appface/grabana/heatmap/axis"
+	"github.com/anil-appface/grabana/links"
+	"github.com/anil-appface/grabana/target/graphite"
+	"github.com/anil-appface/grabana/target/influxdb"
+	"github.com/anil-appface/grabana/target/prometheus"
+	"github.com/anil-appface/grabana/target/stackdriver"
+	"github.com/anil-appface/sdk"
 )
 
 // DataFormatMode represents the data format modes.

@@ -3,9 +3,9 @@ package decoder
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/heatmap/axis"
-	"github.com/K-Phoen/grabana/row"
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/grabana/heatmap/axis"
+	"github.com/anil-appface/grabana/row"
+	"github.com/anil-appface/sdk"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,7 +3,7 @@ package prometheus_test
 import (
 	"testing"
 
-	"github.com/K-Phoen/grabana/target/prometheus"
+	"github.com/anil-appface/grabana/target/prometheus"
 	"github.com/stretchr/testify/require"
 )
 

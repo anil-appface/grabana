@@ -1,7 +1,7 @@
 package alertmanager
 
 import (
-	"github.com/K-Phoen/sdk"
+	"github.com/anil-appface/sdk"
 )
 
 // RoutingPolicyOption represents an option that can be used to configure a
